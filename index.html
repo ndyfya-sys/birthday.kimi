@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Babyy ♡</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 20%, #59416d 0%, transparent 30%),
+        radial-gradient(circle at 80% 80%, #392748 0%, transparent 35%),
+        #100b18;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.star {
+    position: fixed;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    opacity: .6;
+
+    animation:
+        twinkle 2s infinite alternate;
+
+    z-index: 0;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: .15;
+        transform: scale(.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+
+/* =========================
+   GENERAL SCREEN
+========================= */
+
+.screen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.card {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 42px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45);
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.tiny {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: .65;
+
+    margin-bottom: 22px;
+}
+
+
+h1 {
+
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+.subtitle {
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    opacity: .8;
+}
+
+
+button {
+
+    margin-top: 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 15px 30px;
+
+    background: white;
+
+    color: #27172f;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3);
+
+    transition: .3s;
+}
+
+
+button:active {
+
+    transform: scale(.94);
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+#countdownScreen {
+
+    display: none;
+}
+
+
+.count {
+
+    font-size: 65px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+}
+
+
+.countText {
+
+    min-height: 30px;
+
+    opacity: .8;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+#letterScreen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 70px 20px;
+}
+
+
+.letter {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 35px 25px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(14px);
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,.4);
+}
+
+
+.letterTitle {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+#typedLetter {
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    white-space: normal;
+}
+
+
+/* =========================
+   SONG BOX
+========================= */
+
+.song-box {
+
+    display: none;
+
+    text-align: center;
+
+    margin: 35px auto;
+
+    padding: 25px 20px;
+
+    max-width: 400px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:
+        blur(12px);
+
+    animation:
+        songAppear 1s ease;
+}
+
+
+@keyframes songAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.song-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 12px;
+}
+
+
+.song-title {
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+
+.song-name {
+
+    font-size: 13px;
+
+    opacity: .6;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   SONG BUTTON
+========================= */
+
+.song-button {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: #29182f;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border: none;
+
+    margin-top: 0;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+
+.song-button:active {
+
+    transform: scale(.94);
+}
+
+
+/* =========================
+   YOUTUBE MINI PLAYER
+========================= */
+
+.youtube-player {
+
+    display: none;
+
+    margin: 22px auto 0;
+
+    width: 100%;
+
+    max-width: 360px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(0,0,0,.3);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.3);
+
+    animation:
+        playerAppear .7s ease;
+}
+
+
+.youtube-player iframe {
+
+    display: block;
+
+    width: 100%;
+
+    height: 205px;
+
+    border: none;
+}
+
+
+@keyframes playerAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.95)
+            translateY(10px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   PLAYER NOTE
+========================= */
+
+.player-note {
+
+    display: none;
+
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    opacity: .5;
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(255,255,255,.15);
+}
+
+
+.final h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+
+.final p {
+
+    line-height: 1.8;
+
+    opacity: .8;
+}
+
+
+.signature {
+
+    margin-top: 25px;
+
+    font-style: italic;
+
+    opacity: .65;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    animation:
+        floatUp 5s linear forwards;
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: fixed;
+
+    top: -20px;
+
+    width: 8px;
+
+    height: 14px;
+
+    z-index: 20;
+
+    animation:
+        fall 3s linear forwards;
+}
+
+
+@keyframes fall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    h1 {
+
+        font-size: 36px;
+    }
+
+    .count {
+
+        font-size: 55px;
+    }
+
+    .card {
+
+        padding: 35px 20px;
+    }
+
+    #typedLetter {
+
+        font-size: 15px;
+    }
+
+    .youtube-player iframe {
+
+        height: 190px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     STARS
+========================= -->
+
+<div class="star" style="top:8%;left:12%;"></div>
+<div class="star" style="top:16%;left:82%;"></div>
+<div class="star" style="top:30%;left:25%;"></div>
+<div class="star" style="top:45%;left:90%;"></div>
+<div class="star" style="top:60%;left:10%;"></div>
+<div class="star" style="top:72%;left:75%;"></div>
+<div class="star" style="top:87%;left:35%;"></div>
+<div class="star" style="top:22%;left:52%;"></div>
+<div class="star" style="top:52%;left:62%;"></div>
+
+
+<!-- =========================
+     FIRST SCREEN
+========================= -->
+
+<section
+    class="screen"
+    id="startScreen"
+>
+
+    <div class="card">
+
+        <div class="tiny">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+
+        <h1>
+            Hey, Babyy ♡
+        </h1>
+
+
+        <p class="subtitle">
+
+            I made something small for you.<br>
+
+            So before you continue...
+
+            promise me you'll stay until the end? 🤍
+
+        </p>
+
+
+        <button
+            onclick="startSurprise()"
+        >
+
+            Open your surprise 💌
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<section
+    class="screen"
+    id="countdownScreen"
+>
+
+    <div class="card">
+
+        <div class="tiny">
+            WAIT FOR IT...
+        </div>
+
+
+        <div
+            class="count"
+            id="count"
+        >
+            3
+        </div>
+
+
+        <p
+            class="countText"
+            id="countText"
+        >
+
+            something is waiting for you...
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section
+    id="letterScreen"
+>
+
+    <div class="letter">
+
+
+        <div class="letterTitle">
+
+            For My Babyy ♡
+
+        </div>
+
+
+        <!-- =========================
+             SONG
+        ========================= -->
+
+        <div
+            id="songBox"
+            class="song-box"
+        >
+
+            <div class="song-icon">
+
+                🎵
+
+            </div>
+
+
+            <div class="song-title">
+
+                Our song is waiting for you ♡
+
+            </div>
+
+
+            <div class="song-name">
+
+                Bergema Sampai Selamanya
+
+            </div>
+
+
+            <!-- SONG BUTTON -->
+
+            <button
+                id="songButton"
+                class="song-button"
+                onclick="playSong()"
+            >
+
+                ♡ Play our song 🎵
+
+            </button>
+
+
+            <!-- YOUTUBE MINI PLAYER -->
+
+            <div
+                id="youtubePlayer"
+                class="youtube-player"
+            >
+
+                <iframe
+                    id="youtubeFrame"
+                    src=""
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    title="Our song"
+                ></iframe>
+
+            </div>
+
+
+            <div
+                id="playerNote"
+                class="player-note"
+            >
+
+                ♡ playing our song...
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             TYPING LETTER
+        ========================= -->
+
+        <div
+            id="typedLetter"
+        ></div>
+
+
+        <!-- =========================
+             FINAL
+        ========================= -->
+
+        <div class="final">
+
+
+            <h2>
+
+                Happy Birthday, Babyy ♡
+
+            </h2>
+
+
+            <p>
+
+                Even though we're far apart,
+
+                I hope you can feel a little bit
+
+                of my love through this. 🤍
+
+            </p>
+
+
+            <div class="signature">
+
+                — from someone who wishes she could
+
+                be beside you today ♡
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+
+/* =========================
+   BIRTHDAY LETTER
+========================= */
+
+const letter = `
+
+Happy Birthday, Babyy ♡
+
+Today is your day, and I just want you to know how grateful I am that you exist.
+
+I know I can't be there beside you to celebrate your birthday. I can't hand you a present or even see your face when you read this.
+
+But even with all this distance between us, I hope this little message can somehow make you feel a little closer to me.
+
+Thank you for being someone who makes my days feel a little warmer just by being there.
+
+Thank you for every little thing you've done, every conversation, every laugh, and every moment we've shared.
+
+Sometimes I wish distance wasn't a thing, because if I could choose, I'd rather be there with you today.
+
+But until that day comes, I'll keep celebrating you from wherever I am.
+
+I hope this new age brings you so many beautiful things.
+
+I hope you achieve everything you've been working for, stay healthy, stay happy, and always have reasons to smile.
+
+And Babyy, wherever life takes us, I hope you never forget that somewhere, there's someone who is genuinely happy that you were born.
+
+So today, I'm not wishing for anything complicated.
+
+I just hope you get everything your heart has been quietly wishing for.
+
+Happy Birthday, Babyy. 🤍
+
+I'm really glad I get to know you, love you, and celebrate another year of your life with you.
+
+Even from far away, you're still someone very close to my heart.
+
+Happy birthday, my Babyy. ♡
+I love you so muchhh , today and forever 
+I'm so lucky to have you in my life
+Thank you fot existing babyy
+Thankyou for loving me the way you do
+I appreciate you so much
+I love how you make everything feel okay
+you are my biggest support system , thankyou sayang
+Kalau boleh ulang, I still choose you, always
+Don't worry about anything okay, I got you always
+You are not just my bf, you are my best friend
+My love for you is more than words can say
+I hope one day we can achieve our dreams together
+Whatever happens, i want it to be with you
+Thank you so much babyy..
+Iloveyouuumoreee babyy hihihi
+
+`;
+
+
+/* =========================
+   START SURPRISE
+========================= */
+
+function startSurprise() {
+
+
+    document
+        .getElementById("startScreen")
+        .style.display = "none";
+
+
+    document
+        .getElementById("countdownScreen")
+        .style.display = "flex";
+
+
+    let number = 3;
+
+
+    const count =
+        document.getElementById("count");
+
+
+    const countText =
+        document.getElementById("countText");
+
+
+    const messages = [
+
+        "something is waiting for you...",
+
+        "just a little more...",
+
+        "okay... here we go ♡"
+
+    ];
+
+
+    let messageIndex = 0;
+
+
+    const timer =
+        setInterval(() => {
+
+
+            number--;
+
+
+            if (number > 0) {
+
+
+                count.innerText =
+                    number;
+
+
+                countText.innerText =
+                    messages[messageIndex];
+
+
+                messageIndex++;
+
+
+            }
+
+
+            else {
+
+
+                clearInterval(timer);
+
+
+                count.innerText =
+                    "♡";
+
+
+                countText.innerText =
+                    "Happy Birthday, Babyy!";
+
+
+                setTimeout(() => {
+
+
+                    document
+                        .getElementById(
+                            "countdownScreen"
+                        )
+                        .style.display =
+                        "none";
+
+
+                    document
+                        .getElementById(
+                            "letterScreen"
+                        )
+                        .style.display =
+                        "block";
+
+
+                    document
+                        .getElementById(
+                            "songBox"
+                        )
+                        .style.display =
+                        "block";
+
+
+                    confetti();
+
+                    startTyping();
+
+                    startHearts();
+
+
+                }, 1200);
+
+            }
+
+
+        }, 1200);
+
+}
+
+
+/* =========================
+   PLAY YOUTUBE SONG
+========================= */
+
+function playSong() {
+
+    const player =
+        document.getElementById(
+            "youtubePlayer"
+        );
+
+    const frame =
+        document.getElementById(
+            "youtubeFrame"
+        );
+
+    const note =
+        document.getElementById(
+            "playerNote"
+        );
+
+    const button =
+        document.getElementById(
+            "songButton"
+        );
+
+
+    /*
+       YouTube Video ID:
+       rlz0ITBc_18
+    */
+
+    frame.src =
+        "https://www.youtube.com/embed/rlz0ITBc_18?autoplay=1&rel=0";
+
+
+    player.style.display =
+        "block";
+
+
+    note.style.display =
+        "block";
+
+
+    button.innerHTML =
+        "♡ Our song is playing 🎵";
+
+
+    button.style.pointerEvents =
+        "none";
+
+
+    setTimeout(() => {
+
+        player.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "center"
+
+        });
+
+    }, 300);
+
+}
+
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+function startTyping() {
+
+
+    const element =
+        document.getElementById(
+            "typedLetter"
+        );
+
+
+    let i = 0;
+
+
+    function type() {
+
+
+        if (i < letter.length) {
+
+
+            if (letter[i] === "\n") {
+
+                element.innerHTML +=
+                    "<br>";
+
+            }
+
+            else {
+
+                element.innerHTML +=
+                    letter[i];
+
+            }
+
+
+            i++;
+
+
+            window.scrollTo({
+
+                top:
+                    document.body.scrollHeight,
+
+                behavior:
+                    "smooth"
+
+            });
+
+
+            setTimeout(
+                type,
+                28
+            );
+
+        }
+
+    }
+
+
+    type();
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function confetti() {
+
+
+    const symbols = [
+
+        "♡",
+        "♥",
+        "✦",
+        "✧",
+        "•"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < 100;
+        i++
+    ) {
+
+
+        const piece =
+            document.createElement(
+                "div"
+            );
+
+
+        piece.className =
+            "confetti";
+
+
+        piece.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random()
+                    * symbols.length
+                )
+            ];
+
+
+        piece.style.left =
+            Math.random() * 100
+            + "vw";
+
+
+        piece.style.fontSize =
+            (10 +
+            Math.random() * 15)
+            + "px";
+
+
+        piece.style.animationDelay =
+            Math.random() * 1.5
+            + "s";
+
+
+        document.body.appendChild(
+            piece
+        );
+
+
+        setTimeout(() => {
+
+            piece.remove();
+
+        }, 4500);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function startHearts() {
+
+
+    setInterval(() => {
+
+
+        const heart =
+            document.createElement(
+                "div"
+            );
+
+
+        heart.className =
+            "heart";
+
+
+        const hearts = [
+
+            "♡",
+            "♥",
+            "🤍",
+            "💗",
+            "✦"
+
+        ];
+
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random()
+                    * hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100
+            + "vw";
+
+
+        heart.style.fontSize =
+            (14 +
+            Math.random() * 18)
+            + "px";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 5000);
+
+
+    }, 700);
+
+}
+
+</script>
+
+</body>
+</html>
